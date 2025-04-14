@@ -1,0 +1,74 @@
+{
+  "info": {
+    "name": "AI Chatbot API",
+    "description": "Collection for AI Chatbot API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Base API",
+      "item": [
+        {
+          "name": "Root",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": [""]
+            },
+            "description": "Root endpoint that returns welcome message"
+          }
+        },
+        {
+          "name": "API Root",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1"]
+            },
+            "description": "API root endpoint that returns welcome message"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Conversation",
+      "item": [
+        {
+          "name": "Create Conversation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"message\": \"Hello, how are you?\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/conversation",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "conversation"]
+            },
+            "description": "Create a new conversation"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
