@@ -21,7 +21,7 @@ logs/
 *.sln
 
 # OS files
-.DS_Stores
+.DS_Store
 Thumbs.db
 
 # Other
